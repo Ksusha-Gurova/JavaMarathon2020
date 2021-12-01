@@ -1,4 +1,4 @@
-package day6;
+package day6.task2;
 
 public class Airplane {
     private String producer;      //(изготовитель)
@@ -8,7 +8,6 @@ public class Airplane {
     private double fuel;         //(количество топлива в баке)
 
     public double getFuel(){
-        fuel = 0;
         return fuel;
     }
     public void setProducer(String producer){this.producer = producer;}
@@ -21,6 +20,7 @@ public class Airplane {
         this.year = year;
         this.length = lenght;
         this.weight = weight;
+        fuel = 0;
 
     }
     void info() {

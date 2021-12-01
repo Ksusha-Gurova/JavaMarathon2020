@@ -1,4 +1,4 @@
-package day6;
+package day6.task3;
 //Создать класс Teacher (Преподаватель), имеющий поля “Имя”, “Предмет”. Создать
 //        класс  Student (Студент) с полем “Имя”.
 //        Каждый класс имеет конструктор (с параметрами), set и get методы по
@@ -13,13 +13,11 @@ package day6;
 //        значения случайного числа.
 //        Создайте по 1 экземпляру каждого класса, у преподавателя
 
-public class Student {
-    private String name;
+public class Task3 {
+    public static void main(String[] args) {
+        Teacher teacher1 = new Teacher("Gojin Petr Petrovich", "mathimatix");
+        Student student1 = new Student("Afonov Andrey");
+        teacher1.evaluate(student1);
+    }
 
-    public Student(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
-    }
 }

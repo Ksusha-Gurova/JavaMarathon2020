@@ -1,4 +1,4 @@
-package day6;
+package day6.task3;
 //Создать класс Teacher (Преподаватель), имеющий поля “Имя”, “Предмет”. Создать
 //        класс  Student (Студент) с полем “Имя”.
 //        Каждый класс имеет конструктор (с параметрами), set и get методы по
@@ -13,28 +13,13 @@ package day6;
 //        значения случайного числа.
 //        Создайте по 1 экземпляру каждого класса, у преподавателя
 
-import java.util.concurrent.ThreadLocalRandom;
-
-public class Teacher {
+public class Student {
     private String name;
-    private String schoolClass;
-    public Teacher(String name, String schoolClass){
+
+    public Student(String name){
         this.name = name;
-        this.schoolClass = schoolClass;
     }
-    void evaluate(Student student){
-        int e = ThreadLocalRandom.current().nextInt(2,  5+1);
-        String evaluate = "";
-        switch (e){
-            case 2:
-                evaluate = "неудовлетворительно";
-            case 3:
-                evaluate = "удовлетворительно";
-            case 4:
-                evaluate = "хорошо";
-            case 5:
-                evaluate = "отлично";
-        }
-        System.out.println("Преподаватель " + name + " оценил студента " + student.getName() + " по предмету " + schoolClass + " на оценку " + evaluate);
+    public String getName(){
+        return name;
     }
 }

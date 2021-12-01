@@ -1,4 +1,4 @@
-package day6;
+package day6.task2;
 //Создать класс Самолет (Airplane) с полями:
 //        - producer (изготовитель)
 //        - year (год выпуска)
