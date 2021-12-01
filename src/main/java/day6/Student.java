@@ -13,11 +13,13 @@ package day6;
 //        значения случайного числа.
 //        Создайте по 1 экземпляру каждого класса, у преподавателя
 
-public class Task3 {
-    public static void main(String[] args) {
-        Teacher teacher1 = new Teacher("Gojin Petr Petrovich", "mathimatix");
-        Student student1 = new Student("Afonov Andrey");
-        teacher1.evaluate(student1);
-    }
+public class Student {
+    private String name;
 
+    public Student(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
 }
