@@ -23,7 +23,7 @@ public class Airplane {
         fuel = 0;
 
     }
-    void info() {
+    public void info() {
         System.out.println("Изготовитель: " + producer + ", год выпуска: " + year + ", длина: " + length + ", вес: " + weight+", колличество топлива в баке: "+fuel);
     }
     public double fillUp (double fillUp){
