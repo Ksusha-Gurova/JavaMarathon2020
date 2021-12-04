@@ -3,6 +3,7 @@ package day9.Task1;
 //        name). На это поле в классе должен быть конструктор, get и set методы. Также, у
 //        Человека должен быть метод printInfo() , который выводит в консоль информацию
 //        о человеке в формате: “Этот человек с именем ИМЯ”.
+
 //        Затем, создайте класс Студент (англ. Student), который наследуется от класса
 //        Человек. У студента есть дополнительное строковое поле - название его учебной
 //        группы. Для этого поля тоже необходимо создать геттер и сеттер. Конструктор в
@@ -30,14 +31,24 @@ package day9.Task1;
 //        название предмета у объекта-преподавателя. Затем, вызовите printInfo() на
 //        объектах и посмотрите на результат.
 
-public class Task1 {
-    public static void main(String[] args) {
-        Student student1 = new Student("Аркаша", "ЭБ - 101");
-        System.out.println(student1.getNumberGroup());
-        student1.printInfo();
+public class Student extends Human{
+    private String numberGroup;
+    public void setNumberGroup(String numberGroup) {
+        this.numberGroup = numberGroup;
+    }
+    public String getNumberGroup() {
+        return numberGroup;
+    }
 
-        Teacher teacher1 = new Teacher("Александр Иванович Резцов", "Программирование");
-        System.out.println(teacher1.getSchoolClass());
-        teacher1.printInfo();
+
+    public Student(String name, String numberGroup) {
+        super(name);
+        this.numberGroup = numberGroup;
+    }
+
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("Этот студент с именем " + getName());
     }
 }

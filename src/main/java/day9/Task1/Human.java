@@ -30,14 +30,21 @@ package day9.Task1;
 //        название предмета у объекта-преподавателя. Затем, вызовите printInfo() на
 //        объектах и посмотрите на результат.
 
-public class Task1 {
-    public static void main(String[] args) {
-        Student student1 = new Student("Аркаша", "ЭБ - 101");
-        System.out.println(student1.getNumberGroup());
-        student1.printInfo();
-
-        Teacher teacher1 = new Teacher("Александр Иванович Резцов", "Программирование");
-        System.out.println(teacher1.getSchoolClass());
-        teacher1.printInfo();
+public class Human {
+    private String name;
+    public Human(String name){
+        this.name = name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void printInfo(){
+        System.out.println("Этот человек с именем " + name);
+    }
+
 }

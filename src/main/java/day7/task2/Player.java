@@ -29,8 +29,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Player {
     private int stamina;
-    private final int maxStamina = 100;
-    private final int minStamina = 0;
+    private final int MAX_STAMINA = 100;
+    private final int MIN_STAMINA = 0;
     private static int countPlayers = 0;
     public int getCountPlayers(){
         return countPlayers;
