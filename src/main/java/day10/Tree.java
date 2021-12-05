@@ -18,23 +18,14 @@ public class Tree {
 
     private void print(Node currentNode){
 
-//        if (currentNode.getLeftChild() != null){
-//            print(currentNode.getLeftChild());
-//        }
-//
-//        System.out.println(currentNode.getValue());
-//
-//        if (currentNode.getRightChild() != null){
-//            print(currentNode.getRightChild());
-//        }
         if (currentNode.getLeftChild() != null){
             print(currentNode.getLeftChild());
         }
-        System.out.print(currentNode.getValue() + ", ");
+
+        System.out.println(currentNode.getValue());
 
         if (currentNode.getRightChild() != null){
             print(currentNode.getRightChild());
-
         }
     }
 }
