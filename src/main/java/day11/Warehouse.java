@@ -14,7 +14,6 @@ package day11;
 //        А также при вызове doWork() у Сборщика, происходит увеличение значения поля
 //        countOrder в классе Warehouse на 1. При вызове doWork() у Курьера, происходит
 //        увеличение переменной balance в классе Warehouse на 1000.
-
 //        Сотрудникам полагается бонус (индивидуальный расчет для каждого): когда на складе
 //        отгружен 1500-й заказ, заработанная к тому моменту ЗП сборщика утраивается. Когда
 //        складом заработан 1.000.000, заработанная к тому моменту ЗП курьера удваивается.
@@ -22,7 +21,6 @@ package day11;
 //        вызовите у каждого методы doWork() и bonus(), столько раз, чтобы каждый из
 //        сотрудников получил бонус. Выведите в консоль баланс и количество выполненных
 //        заказов на складе и ЗП каждого из сотрудников.
-
 //        Создать второй склад, также принять по 1 сотруднику с однократным вызовом
 //        doWork() у каждого. Проконтролировать, что у склада 1 и его сотрудников при этом
 //        значения не меняются.
@@ -30,39 +28,34 @@ package day11;
 //        хранение ссылки на объект Warehouse и передавайте ее с помощью конструктора или
 //        set метода.
 
-public class Task1 {
-    public static void main(String[] args) {
-        Warehouse warehouse1 = new Warehouse();
-        Courier courier1 = new Courier(warehouse1);
-        Picker picker1 = new Picker(warehouse1);
+public class Warehouse {
+    private int countOrder;
+    private int balance;
 
-        while (warehouse1.getBalance() < 1000000){
-            courier1.doWork();
-        }
-        System.out.println(courier1.getSalary());
-        courier1.bonus();
-        System.out.println(courier1.getSalary());
+    public void setCountOrder(int countOrder) {
+        this.countOrder = countOrder;
+    }
+    public int getCountOrder() {
+        return countOrder;
+    }
 
-        while (warehouse1.getCountOrder() < 1500){
-            picker1.doWork();
-        }
-        System.out.println(picker1.getSalary());
-        picker1.bonus();
-        System.out.println(picker1.getSalary());
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+    public int getBalance() {
+        return balance;
+    }
 
-        warehouse1.toString();
+    public void upBalance (){
+        balance += 1000;
+    }
+    public void upCountOrder (){
+        countOrder += 1;
+    }
 
-        Warehouse warehouse2 = new Warehouse();
-        Courier courier2 = new Courier(warehouse2);
-        Picker picker2 = new Picker(warehouse2);
-
-        courier2.doWork();
-        picker2.doWork();
-
-        System.out.println(courier2.getSalary());
-        System.out.println(picker2.getSalary());
-        warehouse2.toString();
-
-
+    @Override
+    public String toString() {
+        System.out.println("Колличество собранных заказов равно "+ countOrder + ". Доход от доставленных заказов составил " + balance + ".");
+        return super.toString();
     }
 }
