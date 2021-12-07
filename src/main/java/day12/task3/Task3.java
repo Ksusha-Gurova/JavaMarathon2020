@@ -12,10 +12,7 @@ package day12.task3;
 //        из 10 групп. Вывести в консоль оба списка (оригинальный и с группами, основанными
 //        после 2000 года).
 
-import day9.Task2.Figure;
-
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
