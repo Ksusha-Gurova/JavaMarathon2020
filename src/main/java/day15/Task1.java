@@ -42,8 +42,8 @@ public class Task1 {
 
         File fileRecord = new File("src/main/resources/missing_shoes");
         PrintWriter pw = new PrintWriter(fileRecord);
-        for (int i = 0; i < shoes.size(); i++){
-            pw.println(shoes.get(i));
+        for (Shoes shoe : shoes) {
+            pw.println(shoe);
         }
         pw.close();
 

@@ -21,10 +21,10 @@ public class Person {
     }
 
     public static List<Person> parseFileToObjList(File file){
-        Scanner scanner = null;
+//        Scanner scanner = null;
         List<Person> people = new ArrayList<>();
         try {
-            scanner = new Scanner(file);
+            Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()){
                 String currentLine = scanner.nextLine();
                 String[] words = currentLine.split(" ");
