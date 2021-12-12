@@ -39,6 +39,7 @@ public class Task1 {
                 shoes.add(new Shoes(element[0], Integer.parseInt(element[1]),Integer.parseInt(element[2])));
             }
         }
+        scanner.close();
 
         File fileRecord = new File("src/main/resources/missing_shoes");
         PrintWriter pw = new PrintWriter(fileRecord);
