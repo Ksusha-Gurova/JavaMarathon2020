@@ -39,20 +39,23 @@ package day17;
 //    Ферзь (черный)   ♛
 //    Король (черный)  ♚
 
-//    Используя созданный enum, в методе main() класса Task1 создайте массив,
-//    содержащий 4 белых пешки и 4 черных ладьи. Выведите содержимое этого массива
-//    на экран, используя строковые обозначения шахматных фигур.
-//    Вывод в консоль должен быть таким:
-//    ♙ ♙ ♙ ♙ ♜ ♜ ♜ ♜
+public enum ChessPiece {
+    KING_WHITE(100, "♔"), QUEEN_WHITE(9, "♕"), ROOK_WHITE(5, "♖"),
+    BISHOP_WHITE(3.5, "♗"), KNIGHT_WHITE(3, "♘"), PAWN_WHITE(1, "♙"),
 
-public class Task1 {
-    public static void main(String[] args) {
-        ChessPiece[] figures = {
-            ChessPiece.PAWN_BLACK, ChessPiece.PAWN_BLACK, ChessPiece.PAWN_BLACK, ChessPiece.PAWN_BLACK,
-            ChessPiece.ROOK_BLACK, ChessPiece.ROOK_BLACK, ChessPiece.ROOK_BLACK, ChessPiece.ROOK_BLACK
-        };
-        for (ChessPiece figure : figures) {
-            System.out.print(figure.getSymbol() + " ");
-        }
+    KING_BLACK(100, "♚"), QUEEN_BLACK(9, "♛"), ROOK_BLACK(5, "♜"),
+    BISHOP_BLACK(3.5, "♝"), KNIGHT_BLACK(3, "♞"), PAWN_BLACK(1, "♟"),
+    EMPTY(-1, "_");
+
+     private double worth;
+     private String symbol;
+
+    ChessPiece(double worth, String symbol) {
+        this.worth = worth;
+        this.symbol = symbol;
+    }
+
+    public String getSymbol() {
+        return symbol;
     }
 }
